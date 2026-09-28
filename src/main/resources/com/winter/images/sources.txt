@@ -1,0 +1,1 @@
+Boards and pieces are taken from https://github.com/Little-Mage/ShogiGUI-piece-sets/tree/master, none is my work
