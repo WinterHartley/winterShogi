@@ -7,7 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class ShogiApp extends Application {
-	public final PreloadImages images = new PreloadImages();
+	public static final PreloadImages images = new PreloadImages();
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 		//Sets up layout
@@ -16,8 +16,8 @@ public class ShogiApp extends Application {
 		BorderPane borderPane = new BorderPane();
 		borderPane.setStyle("-fx-background-color: #141617");
 
-		Hand senteHand = new Hand("sente");
-		Hand goteHand = new Hand("gote");
+		Hand senteHand = new Hand("player");
+		Hand goteHand = new Hand("opponent");
 
 		borderPane.setLeft(senteHand);
 		borderPane.setRight(goteHand);
@@ -29,8 +29,8 @@ public class ShogiApp extends Application {
 		//Create scene
         Scene scene = new Scene(borderPane);
         primaryStage.setScene(scene);
-		primaryStage.setMinHeight(500);
-		primaryStage.setMinWidth(500);
+		primaryStage.setMinHeight(600);
+		primaryStage.setMinWidth(600);
         primaryStage.show();
 	}
 
