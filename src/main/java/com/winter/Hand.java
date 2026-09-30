@@ -43,6 +43,7 @@ public class Hand extends VBox{
 			ImageView view = new ImageView(ShogiApp.images.pieceImages.get(side + piece));
 			view.setPreserveRatio(true);
 			view.setFitHeight(pieceSize);
+			view.setOpacity(0.5);
 			if(side.equals("opponent")){
 				//Undo flipping of the icons
 				view.setScaleX(-1);
