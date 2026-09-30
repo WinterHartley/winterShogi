@@ -16,10 +16,10 @@ public class PreloadImages {
 		final String boardFolderPath = "/com/winter/images/boards";
 
 		for(String pieceName : pieceNameList){
-			pieceImages.put("player" + pieceName, new Image(getClass().getResource(playerPieceFolderPath + "/player" + pieceName + ".jpg").toExternalForm()));
-			pieceImages.put("opponent" + pieceName, new Image(getClass().getResource(opponentPieceFolderPath + "/opponent" + pieceName + ".jpg").toExternalForm()));
+			pieceImages.put("player" + pieceName, new Image(getClass().getResource(playerPieceFolderPath + "/player" + pieceName + ".png").toExternalForm()));
+			pieceImages.put("opponent" + pieceName, new Image(getClass().getResource(opponentPieceFolderPath + "/opponent" + pieceName + ".png").toExternalForm()));
 		}
-		boardImages.put("lightYellowBoard", new Image(getClass().getResource(boardFolderPath + "/light-yellow.jpg").toExternalForm()));
+		boardImages.put("lightYellow", new Image(getClass().getResource(boardFolderPath + "/light-yellow.jpg").toExternalForm()));
 	}
 
 	
