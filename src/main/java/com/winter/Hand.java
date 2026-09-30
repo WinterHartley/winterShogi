@@ -1,5 +1,7 @@
 package com.winter;
 
+import java.util.HashMap;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
@@ -11,7 +13,16 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.VBox;
 
 public class Hand extends VBox{
+	private HashMap<String, Integer> piecesInHand = new HashMap<>();
+
 	Hand(String side){
+		//Init empty hand
+		String[] pieceNames = {"Rook", "Bishop", "Gold", "Silver", "Knight", "Lance", "Pawn"};
+		for(String piece : pieceNames){
+			piecesInHand.put(piece, 0);
+		}
+
+		//Graphics display
 		Insets handInsets = new Insets(60,0,0,0);
 		Image handImage;
 
@@ -37,13 +48,13 @@ public class Hand extends VBox{
 		}
 
 		//Add content
-		String[] pieceNames = {"Rook", "Bishop", "Gold", "Silver", "Knight", "Lance", "Pawn"};
 		final Double pieceSize = (handImage.getHeight() - handInsets.getTop()) / pieceNames.length;
 		for(String piece : pieceNames){
 			ImageView view = new ImageView(ShogiApp.images.pieceImages.get(side + piece));
 			view.setPreserveRatio(true);
 			view.setFitHeight(pieceSize);
-			view.setOpacity(0.5);
+			if(piecesInHand.get(piece) == 0)
+				view.setOpacity(0.5); //If not in hand, make partially opaque
 			if(side.equals("opponent")){
 				//Undo flipping of the icons
 				view.setScaleX(-1);
