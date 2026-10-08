@@ -33,7 +33,7 @@ public class Hand extends VBox{
 		Image handImage;
 
 		//Gets correct image
-		handImage = new Image(getClass().getResource("/com/winter/images/boards/hand.png").toExternalForm());
+		handImage = ShogiApp.images.boardImages.get("hand");
 		BackgroundImage handBackgroundImage = new BackgroundImage(handImage,
 			javafx.scene.layout.BackgroundRepeat.NO_REPEAT,
 			javafx.scene.layout.BackgroundRepeat.NO_REPEAT,

@@ -19,6 +19,7 @@ public class PreloadImages {
 			pieceImages.put("player" + pieceName, new Image(getClass().getResource(playerPieceFolderPath + "/player" + pieceName + ".png").toExternalForm()));
 			pieceImages.put("opponent" + pieceName, new Image(getClass().getResource(opponentPieceFolderPath + "/opponent" + pieceName + ".png").toExternalForm()));
 		}
+		boardImages.put("hand", new Image(getClass().getResource(boardFolderPath + "/hand.png").toExternalForm()));
 		boardImages.put("lightYellow", new Image(getClass().getResource(boardFolderPath + "/light-yellow.jpg").toExternalForm()));
 	}
 
